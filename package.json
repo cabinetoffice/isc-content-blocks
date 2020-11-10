@@ -1,0 +1,53 @@
+{
+  "name": "isc-content-blocks",
+  "version": "1.0.0",
+  "description": "plugin for ISC Content Blocks",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --config webpack.config.js --mode=development --watch",
+    "build": "webpack --config webpack.config.js --mode=production"
+  },
+  "author": "Aran Wilcox",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "^7.10.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.10.0",
+    "@babel/preset-react": "^7.10.0",
+    "@wordpress/blocks": "^6.16.0",
+    "@wordpress/browserslist-config": "^2.6.0",
+    "@wordpress/components": "^9.6.0",
+    "@wordpress/edit-post": "^3.17.0",
+    "@wordpress/editor": "^9.16.0",
+    "@wordpress/element": "^2.14.0",
+    "@wordpress/i18n": "^3.12.0",
+    "@wordpress/plugins": "^2.16.0",
+    "babel-loader": "^8.1.0",
+    "browserslist": "^4.12.0",
+    "classnames": "^2.2.6",
+    "css-loader": "^3.5.3",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "@wordpress/api-fetch": "^3.15.0",
+    "@wordpress/block-editor": "^3.11.0",
+    "@wordpress/compose": "^3.15.0",
+    "@wordpress/data": "^4.18.0",
+    "@wordpress/date": "^3.9.0",
+    "@wordpress/html-entities": "^2.7.0",
+    "@wordpress/server-side-render": "^1.12.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "plotly.js": "^1.54.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-plotly.js": "^2.4.0"
+  },
+  "browserslist": [
+    ">0.25%, not dead"
+  ]
+}

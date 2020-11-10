@@ -1,0 +1,22 @@
+{
+    "name": "cabinetoffice/isc-content-blocks",
+    "license": "Licensed",
+    "authors": [
+        {
+            "name": "Aran Wilcox",
+            "email": "aran.wilcox@affinity-digital.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "ISC\\Inc\\": "./inc"
+        }
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
+    }
+}
