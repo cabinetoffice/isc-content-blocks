@@ -1,6 +1,9 @@
 {
     "name": "cabinet-office/isc-content-blocks",
+    "description": "Content Blocks for the ISC WordPress project",
     "license": "Licensed",
+    "keywords"   : ["wordpress"],
+    "type"       : "wordpress-plugin",
     "authors": [
         {
             "name": "Aran Wilcox",
