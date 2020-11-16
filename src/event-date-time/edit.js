@@ -34,7 +34,6 @@ class CO_CPTEventDateTime extends Component {
         const humanTime = new Date(date_time).toTimeString();
         const humanDate = new Date(date_time).toDateString();
 
-
         const MyDateTimePicker = withState( {
             date: new Date(),
         } )( ( { date, setState } ) => {
@@ -51,7 +50,7 @@ class CO_CPTEventDateTime extends Component {
                 <DateTimePicker
                     currentDate={ date_time ? date_time : date }
                     onChange={ ( date ) => {
-                        console.log(date);
+                        //console.log(date);
                         setState( { date } );
                         this.onChangeDateTime( date );
                     }

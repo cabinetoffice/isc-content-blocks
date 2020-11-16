@@ -29,11 +29,29 @@ registerBlockType( 'co/event-date-time', {
         __( 'spok', 'gov' )
     ],
 
-    edit:edit,
-
-    save() {
-        return null;
+    attributes: {
+        date_time: { 
+            type: 'string',
+            default: null
+        }
     },
 
-} );
+    edit:edit,
 
+    save( { attributes } ) {
+
+        const { date_time } = attributes;
+
+        let date = new Date(date_time);  
+
+        // Format the date to Hour:Minute, Day Month Year
+        date = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', day: "numeric", month: "long", year: "numeric"});
+
+        // Split by the comma to show in the correct order
+        date = date.split(', ');
+        date = date[1] + ', ' + date[0];
+
+        return <p>{ date }</p>
+    }
+
+} );

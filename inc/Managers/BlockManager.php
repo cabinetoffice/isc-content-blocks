@@ -25,7 +25,7 @@ class BlockManager extends BaseController{
 	public function co_committee_table_columns_block_register(): void {
 
 		wp_register_script(
-			'co_committee_table_columns_columns_block_editor_script',
+			'co_committee_table_columns_block_editor_script',
 			$this->plugin_url . 'dist/editor-output.js',
 			array( 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor', 'wp-components','wp-edit-post', 'wp-plugins' )
 		);
@@ -33,7 +33,7 @@ class BlockManager extends BaseController{
 		register_block_type(
 			'co/committee-table-columns',
 			array(
-				'editor_script'   => 'co_committee_table_columns_columns_block_editor_script'
+				'editor_script'   => 'co_committee_table_columns_block_editor_script'
 			)
 		);
 
@@ -43,7 +43,7 @@ class BlockManager extends BaseController{
 	public function co_committee_table_row_columns_block_register(): void {
 
 		wp_register_script(
-			'co_committee_table_row_columns_block_editor_script',
+			'co_capability_degraded_row_block_editor_script',
 			$this->plugin_url . 'dist/editor-output.js',
 			array( 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor', 'wp-components','wp-edit-post', 'wp-plugins' )
 		);
@@ -51,7 +51,7 @@ class BlockManager extends BaseController{
 		register_block_type(
 			'co/committee-table-row',
 			array(
-				'editor_script'   => 'co_committee_table_row_columns_block_editor_script'
+				'editor_script'   => 'co_capability_degraded_row_block_editor_script'
 			)
 		);
 
