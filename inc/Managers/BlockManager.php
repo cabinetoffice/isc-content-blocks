@@ -19,6 +19,7 @@ class BlockManager extends BaseController{
 		add_action( 'init', [ $this, 'co_committee_table_columns_block_register' ] );
 		add_action( 'init', [ $this, 'co_committee_table_row_columns_block_register' ] );
 		add_action( 'init', [ $this, 'co_event_date_time_register' ] );
+		add_action( 'init', [ $this, 'co_profile_link_block_register' ] );
 	}
 
 	// START: Register - Purpose content block
@@ -74,5 +75,23 @@ class BlockManager extends BaseController{
 		);
 
 	}  // END: Register - General content block
+
+	// START: Register - Profile link content block
+	public function co_profile_link_block_register(): void {
+
+		wp_register_script(
+			'co_profile_link_block_editor_script',
+			$this->plugin_url . 'dist/editor-output.js',
+			array( 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor', 'wp-components','wp-edit-post', 'wp-plugins' )
+		);
+
+		register_block_type(
+			'co/profile-link',
+			array(
+				'editor_script'   => 'co_profile_link_block_editor_script'
+			)
+		);
+
+	}  // END: Register - Purpose content block
 
 }
