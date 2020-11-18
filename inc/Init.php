@@ -18,7 +18,8 @@ final class Init {
 		return [
 			Base\Enqueue::class,
 			Managers\BlockManager::class,
-			Admin\DatePickerPostMeta::class
+			Admin\DatePickerPostMeta::class,
+			Admin\ContentBlockList::class
 		];
 	}  // END: get_services()
 
