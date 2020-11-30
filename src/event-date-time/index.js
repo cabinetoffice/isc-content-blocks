@@ -42,16 +42,13 @@ registerBlockType( 'co/event-date-time', {
 
         const { date_time } = attributes;
 
-        let date = new Date(date_time);  
+        const saved_date = new Date(date_time);
 
-        // Format the date to Hour:Minute, Day Month Year
-        date = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', day: "numeric", month: "long", year: "numeric"});
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
 
-        // Split by the comma to show in the correct order
-        date = date.split(', ');
-        date = date[1] + ', ' + date[0];
+        const formatted_date = saved_date.toLocaleDateString('en-GB', options)
 
-        return <p>{ date }</p>
+        return <p>{ formatted_date }</p>
     }
 
 } );
