@@ -46,7 +46,7 @@ registerBlockType( 'co/event-date-time', {
 
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
 
-        const formatted_date = saved_date.toLocaleDateString('en-GB', options)
+        const formatted_date = saved_date.toLocaleDateString('en-GB', options);
 
         return <p>{ formatted_date }</p>
     }
