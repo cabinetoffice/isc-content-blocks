@@ -44,11 +44,15 @@ registerBlockType( 'co/event-date-time', {
 
         const saved_date = new Date(date_time);
 
-        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        const date_options = { day: 'numeric', month: 'long', year: 'numeric' };
 
-        const formatted_date = saved_date.toLocaleDateString('en-GB', options);
+        const time_options = { hour: '2-digit', minute: '2-digit' };
 
-        return <p>{ formatted_date }</p>
+        const formatted_date = saved_date.toLocaleDateString('en-GB', date_options);
+
+        const formatted_time = saved_date.toLocaleTimeString('en-GB', time_options);
+
+        return <p>{ formatted_time + ', ' + formatted_date }</p>
     }
 
 } );
