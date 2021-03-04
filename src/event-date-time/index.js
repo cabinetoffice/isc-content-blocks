@@ -42,7 +42,11 @@ registerBlockType( 'co/event-date-time', {
 
         const { date_time } = attributes;
 
-        const saved_date = new Date(date_time);
+        if ( date_time !== null ) {
+            var saved_date = new Date(date_time);
+        } else {
+            var saved_date = new Date();
+        }
 
         const date_options = { day: 'numeric', month: 'long', year: 'numeric' };
 
