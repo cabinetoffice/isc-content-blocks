@@ -53,7 +53,7 @@ class DatePickerPostMeta {
 
             // If the post has no date set then use the post date as a fallback
             if ( empty( $date ) ) {
-                $date = get_the_date( 'Ym', $post_id );
+                $date = strtotime(get_the_date( 'Ym', $post_id ));
             }
 
             // Add the date as post meta
